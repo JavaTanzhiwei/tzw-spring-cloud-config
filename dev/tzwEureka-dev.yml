@@ -1,0 +1,24 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: tzwEureka
+  security:
+    user:
+      name: tzw
+      password: 123456
+
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 5000
+    # 关闭缓存
+    use-read-only-response-cache: true
+    # 关闭自我保护
+    enable-self-preservation: true
+  instance:
+    hostname: localhost
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}-${server.port}-${random.int}
+  client:
+    prefer-ip-address: true
+    register-with-eureka: true
+    fetch-registry: true
