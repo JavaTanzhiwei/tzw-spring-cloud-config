@@ -1,4 +1,7 @@
 spring:
+  cloud:
+    config:
+      overrideNone: true
   datasource:
     jdbc-url: jdbc:mysql://127.0.0.1:3306/tzw-spring-cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&characterSetResults=utf-8&pinGlobalTxToPhysicalConnection=true&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&rewriteBatchedStatements=true
     url: jdbc:mysql://127.0.0.1:3306/tzw-spring-cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&characterSetResults=utf-8&pinGlobalTxToPhysicalConnection=true&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&rewriteBatchedStatements=true
