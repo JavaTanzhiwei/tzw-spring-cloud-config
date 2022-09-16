@@ -10,7 +10,7 @@ eureka:
     healthcheck:
       # 允许上报服务状态
       enabled: true
-    fetch-registry: true
-    register-with-eureka: true
+    fetch-registry: false
+    register-with-eureka: false
     service-url:
       defaultZone: http://tzw:123456@localhost:8002/eureka/

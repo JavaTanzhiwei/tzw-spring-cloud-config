@@ -20,5 +20,5 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}-${server.port}-${random.int}
   client:
     prefer-ip-address: true
-    register-with-eureka: true
-    fetch-registry: true
+    register-with-eureka: false
+    fetch-registry: false
