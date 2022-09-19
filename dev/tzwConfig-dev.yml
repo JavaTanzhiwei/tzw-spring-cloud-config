@@ -4,7 +4,6 @@ spring:
       overrideNone: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    jdbc-url: jdbc:mysql://127.0.0.1:3306/tzw-spring-cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&characterSetResults=utf-8&pinGlobalTxToPhysicalConnection=true&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&rewriteBatchedStatements=true
     url: jdbc:mysql://127.0.0.1:3306/tzw-spring-cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&characterSetResults=utf-8&pinGlobalTxToPhysicalConnection=true&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&rewriteBatchedStatements=true
     username: root
     password: root
@@ -21,7 +20,7 @@ eureka:
     healthcheck:
       # 允许上报服务状态
       enabled: true
-    register-with-eureka: false #false表示不向注册中心注册自己
+    register-with-eureka: true #false表示不向注册中心注册自己
     fetch-registry: true #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
       defaultZone: http://tzw:123456@localhost:8002/eureka/
