@@ -8,11 +8,6 @@ spring:
     username: root
     password: root
 
-# MyBatis Plus配置
-mybatis-plus:
-  # 搜索指定包别名
-  typeAliasesPackage: com.springcloud.**.mapper
-
 eureka:
   instance:
     prefer-ip-address: true
