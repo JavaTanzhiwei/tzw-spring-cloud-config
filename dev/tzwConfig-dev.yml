@@ -1,22 +1,13 @@
 spring:
-  # 配置中心
   cloud:
     config:
       overrideNone: true
-      server:
-        native:
-          search-locations: classpath:/config
-        git:
-          uri: https://gitee.com/JavaTanzhiwei/tzw-spring-cloud-config.git #git地址
-          username: JavaTanzhiwei # git账号名
-          password: tzw320511 # git账号密码
-  # 数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/tzw-spring-cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&characterSetResults=utf-8&pinGlobalTxToPhysicalConnection=true&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&rewriteBatchedStatements=true
     username: root
     password: root
-# Eureka配置
+
 eureka:
   instance:
     prefer-ip-address: true
