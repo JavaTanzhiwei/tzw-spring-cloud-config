@@ -8,8 +8,6 @@ spring:
     username: root
     password: root
   security:
-    basic:
-      enabled: true
     user:
       name: tzw
       password: 123456
