@@ -6,30 +6,15 @@ spring:
     name: tzwGateWay
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+      loadbalancer:
+        retry:
+          enabled: true
       routes:
         # 路由规则-系统管理
         - id: tzwSystem
           uri: lb://tzwSystem
           predicates: # 断言（判断条件）
-            - Path=/system/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
-
-# 信号量隔离:默认是THREAD 见com.netflix.hystrix.ExecutionIsolationStrategy
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          # hystrix的超时fallback
-          enabled: true
-          # 隔离策略设置为信号量隔离
-        isolation:
-          strategy: SEMAPHORE
-          thread:
-            # 超时时间设置为6秒
-            timeoutInMilliseconds: 180000
-# 超时时间设置为6秒
-ribbon:
-  eager-load:
-    enabled: true
-  ReadTimeout: 180000
-  ConnectTimeout: 180000
+            - Path=/tzwSystem/sys/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
