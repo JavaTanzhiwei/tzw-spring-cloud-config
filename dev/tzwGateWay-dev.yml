@@ -7,15 +7,16 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
-          lower-case-service-id: true
+          # 是否与服务发现组件进行结合，通过ServiceId转发到具体服务实例
+          enabled: true # 是否开启基于服务发现的路由规则
+          lower-case-service-id: false # 是否将服务名称转小写
       routes:
-        # 系统管理
-        - id: my_tzwSystem
+        # 路由规则-系统管理
+        - id: tzwSystem
           uri: lb://tzwSystem
-          predicates:
-            - Path=/**
+          predicates: # 断言（判断条件）
+            - Path=/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
           filters:
-            # 意为匹配port后的第一个单词
-            - StripPrefix=1
+            # 意为匹配port后的第N个单词
+            - StripPrefix=0
 
