@@ -18,3 +18,5 @@ spring:
           uri: lb://tzwSystem
           predicates: # 断言（判断条件）
             - Path=/tzwSystem/sys/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
+          filters:
+            - StripPrefix=1
