@@ -10,7 +10,7 @@ spring:
           enabled: true
       routes:
         # 系统管理
-        - id: tzwModulesSystem
+        - id: tzwSystem
           uri: lb://tzwSystem
           predicates:
             - Path=/sys/**
