@@ -11,10 +11,10 @@ spring:
           service-id: tzwConfig
       routes:
         # 系统管理
-        - id: tzwModulesSystem
-          uri: lb://tzwModulesSystem
+        - id: tzwSystem
+          uri: lb://tzwSystem
           predicates:
-            - Path=/**
+            - Path=/sys/**
           filters:
             - StripPrefix=1
 
