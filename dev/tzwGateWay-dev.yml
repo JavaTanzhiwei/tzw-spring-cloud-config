@@ -8,10 +8,11 @@ spring:
       discovery:
         locator:
           enabled: true
+          service-id: tzwConfig
       routes:
         # 系统管理
-        - id: tzwSystem
-          uri: lb://tzwSystem
+        - id: tzwModulesSystem
+          uri: lb://tzwModulesSystem
           predicates:
             - Path=/sys/**
           filters:
