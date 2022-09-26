@@ -11,7 +11,7 @@ spring:
       routes:
         # 系统管理
         - id: tzwModulesSystem
-          uri: lb://tzwModulesSystem
+          uri: lb://tzwSystem
           predicates:
             - Path=/sys/**
           filters:
