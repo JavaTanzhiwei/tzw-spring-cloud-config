@@ -15,7 +15,7 @@ spring:
         - id: tzwSystem
           uri: lb://tzwSystem
           predicates: # 断言（判断条件）
-            - Path=/tzwSystem/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
+            - Path=/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
 
 # 信号量隔离:默认是THREAD 见com.netflix.hystrix.ExecutionIsolationStrategy
 hystrix:
