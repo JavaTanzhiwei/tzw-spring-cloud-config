@@ -3,24 +3,18 @@ server:
 spring:
   application:
     name: tzwGateWay
-cloud:
-  config:
-    fail-fast: true
-    name: ${spring.application.name}
-    discovery:
-      enabled: true
-      service-id: tzwConfig
-  gateway:
-    discovery:
-      locator:
-        enabled: true
-    routes:
-      # 系统管理
-      - id: tzwModulesSystem
-        uri: lb://tzwModulesSystem
-        predicates:
-          - Path=/sys/**
-        filters:
-          - StripPrefix=1
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        # 系统管理
+        - id: tzwModulesSystem
+          uri: lb://tzwModulesSystem
+          predicates:
+            - Path=/sys/**
+          filters:
+            - StripPrefix=1
 
 
