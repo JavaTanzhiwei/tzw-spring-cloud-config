@@ -18,5 +18,5 @@ spring:
             - Path=/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
           filters:
             # 意为匹配port后的第N个单词
-            - StripPrefix=0
+            - StripPrefix=1
 
