@@ -4,6 +4,11 @@ spring:
   application:
     name: tzwGateWay
   cloud:
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: tzwConfig
     gateway:
       discovery:
         locator:
