@@ -5,24 +5,13 @@ spring:
   application:
     name: tzwGateWay
   cloud:
-    config:
-      fail-fast: true
-      name: ${spring.application.name}
-      profile: dev
-      discovery:
-        enabled: true
-        service-id: tzwConfig
     gateway:
-      discovery:
-        locator:
-          # 是否与服务发现组件进行结合，通过ServiceId转发到具体服务实例
-          enabled: true # 是否开启基于服务发现的路由规则
       routes:
         # 路由规则-系统管理
         - id: tzwSystem
           uri: lb://tzwSystem
           predicates: # 断言（判断条件）
-            - Path=/tzwsystem/sys/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
+            - Path=/sys/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
 
 # 信号量隔离:默认是THREAD 见com.netflix.hystrix.ExecutionIsolationStrategy
 hystrix:
