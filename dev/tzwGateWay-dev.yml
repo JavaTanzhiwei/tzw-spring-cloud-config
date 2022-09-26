@@ -12,8 +12,8 @@ spring:
           lower-case-service-id: true # 是否将服务名称转小写
       routes:
         # 路由规则-系统管理
-        - id: tzw-system
-          uri: lb://tzw-system
+        - id: tzwSystem
+          uri: lb://tzwSystem
           predicates: # 断言（判断条件）
             - Path=/tzwSystem/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
 
