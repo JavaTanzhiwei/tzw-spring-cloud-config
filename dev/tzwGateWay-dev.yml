@@ -7,8 +7,8 @@ spring:
     gateway:
       routes:
         # 系统管理
-        - id: tzwSystem
-          uri: http://localhost:8003
+        - id: my_tzwSystem
+          uri: lb://tzwSystem
           predicates:
             - Path=/**
           filters:
