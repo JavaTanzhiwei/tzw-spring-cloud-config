@@ -5,16 +5,12 @@ spring:
     name: tzwGateWay
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          service-id: tzwConfig
       routes:
         # 系统管理
         - id: tzwSystem
-          uri: lb://tzwSystem
+          uri: http://localhost:8003
           predicates:
-            - Path=/sys/**
+            - Path=/**
           filters:
             - StripPrefix=1
 
