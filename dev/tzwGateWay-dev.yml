@@ -14,7 +14,7 @@ spring:
         - id: tzwModulesSystem
           uri: lb://tzwModulesSystem
           predicates:
-            - Path=/sys/**
+            - Path=/**
           filters:
             - StripPrefix=1
 
