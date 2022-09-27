@@ -21,7 +21,7 @@ spring:
     password: root
   # redis通用配置 子服务可以自行配置进行覆盖
   redis:
-    host: localhost
+    host: 127.0.0.1
     port: 6379
     # 密码(如没有密码请注释掉)
     # password:
