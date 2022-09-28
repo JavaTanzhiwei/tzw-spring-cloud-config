@@ -1,6 +1,14 @@
 server:
   port: 8004
 
+# 安全配置
+security:
+  # 不校验白名单
+  ignore:
+    whites:
+      - /auth/logout
+      - /auth/login
+
 spring:
   application:
     name: tzwGateWay
@@ -27,3 +35,4 @@ spring:
             - Path=/tzwAuth/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
           filters:
             - StripPrefix=1
+
