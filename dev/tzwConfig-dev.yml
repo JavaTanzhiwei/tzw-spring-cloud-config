@@ -108,6 +108,8 @@ sa-token:
   is-read-head: true
   # 是否尝试从cookie里读取token
   is-read-cookie: true
+  # jwt秘钥
+  jwt-secret-key: tzwspringcloud
   # 是否输出操作日志
   is-log: false
 # MyBatisPlus配置
