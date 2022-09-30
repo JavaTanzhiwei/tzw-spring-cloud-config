@@ -7,7 +7,7 @@ security:
   xss:
     enabled: true
     excludeUrls:
-      - /sys/user
+      - /auth/user
   # 不校验白名单
   ignore:
     whites:
