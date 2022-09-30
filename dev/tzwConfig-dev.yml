@@ -108,10 +108,8 @@ sa-token:
   is-read-head: false
   # 是否尝试从cookie里读取token
   is-read-cookie: false
-  # jwt秘钥
-  jwt-secret-key: abcdefghijklmnopqrstuvwxyz
   # 是否输出操作日志
-  is-log: true
+  is-log: false
 # MyBatisPlus配置
 # https://baomidou.com/config/
 mybatis-plus:
