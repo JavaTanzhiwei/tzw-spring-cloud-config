@@ -105,9 +105,9 @@ sa-token:
   # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
   is-share: false
   # 是否尝试从header里读取token
-  is-read-head: false
+  is-read-head: true
   # 是否尝试从cookie里读取token
-  is-read-cookie: false
+  is-read-cookie: true
   # 是否输出操作日志
   is-log: false
 # MyBatisPlus配置
