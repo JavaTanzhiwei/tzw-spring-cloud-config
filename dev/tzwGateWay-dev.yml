@@ -11,8 +11,8 @@ security:
   # 不校验白名单
   ignore:
     whites:
-      - /auth/user/login
-      - /auth/user/logout
+      - /tzwAuth/auth/user/login
+      - /tzwAuth/auth/user/logout
 
 spring:
   application:
