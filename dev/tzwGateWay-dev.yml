@@ -11,9 +11,7 @@ security:
   # 不校验白名单
   ignore:
     whites:
-      - /tzwAuth/auth/user/login
-      - /tzwAuth/auth/user/logout
-
+      - /tzwSystem/auth/user/doLogin
 spring:
   application:
     name: tzwGateWay
@@ -34,13 +32,6 @@ spring:
           uri: lb://tzwSystem
           predicates: # 断言（判断条件）
             - Path=/tzwSystem/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
-          filters:
-            - StripPrefix=1
-        # 路由规则-认证
-        - id: tzwAuth
-          uri: lb://tzwAuth
-          predicates: # 断言（判断条件）
-            - Path=/tzwAuth/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
           filters:
             - StripPrefix=1
 
