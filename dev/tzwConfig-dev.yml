@@ -39,10 +39,6 @@ spring:
     timeout: 10s
     ssl: false
 
-feign:
-  hystrix:
-    enabled: true
-
 # redisson 配置
 redisson:
   # redis key前缀
