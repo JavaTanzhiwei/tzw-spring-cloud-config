@@ -7,11 +7,11 @@ security:
   xss:
     enabled: true
     excludeUrls:
-      - /auth/user
+      - /satoken/user/doLogin
   # 不校验白名单
   ignore:
     whites:
-      - /auth/user/doLogin
+      - /satoken/user/doLogin
 spring:
   application:
     name: tzwGateWay
