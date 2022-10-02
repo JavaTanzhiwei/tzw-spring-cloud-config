@@ -11,7 +11,7 @@ security:
   # 不校验白名单
   ignore:
     whites:
-      - /tzwAuth/auth/user/doLogin
+      - /auth/user/doLogin
 spring:
   application:
     name: tzwGateWay
