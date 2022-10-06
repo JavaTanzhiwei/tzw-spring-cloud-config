@@ -41,3 +41,10 @@ spring:
             - Path=/tzwAuth/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
           filters:
             - StripPrefix=1
+        # 路由规则-定时任务
+        - id: tzwJob
+          uri: lb://tzwJob
+          predicates: # 断言（判断条件）
+            - Path=/tzwJob/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
+          filters:
+            - StripPrefix=1
