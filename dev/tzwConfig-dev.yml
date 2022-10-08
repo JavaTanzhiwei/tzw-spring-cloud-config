@@ -201,7 +201,7 @@ feign:
 
 # 日志配置文件地址
 logging:
-  config: classpath:logback.xml
+  config: classpath:log4j2.xml
   level:
     web: INFO
     org:
