@@ -198,3 +198,16 @@ feign:
       default:
         connectTimeout: 5000  # 指定Feign连接提供者的超时时限
         readTimeout: 5000    # 指定Feign从请求到获取提供者响应的超时时限
+
+# 日志配置文件地址
+logging:
+  config: classpath:logback.xml
+  level:
+    web: INFO
+    org:
+      hibernate:
+        SQL: debug   #debug时显示sql
+        type:
+          descriptor:
+            sql:
+              BasicBinder: trace  #trace时，显示参数
