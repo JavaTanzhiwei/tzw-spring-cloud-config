@@ -200,10 +200,14 @@ feign:
         readTimeout: 5000    # 指定Feign从请求到获取提供者响应的超时时限
 
 # 日志配置文件地址
-# 全局日志
 logging:
+  config: classpath:log4j2.xml
   level:
-    root: info
-    # 日志输出
-  file:
-    name: home/logs
+    web: INFO
+    org:
+      hibernate:
+        SQL: debug   #debug时显示sql
+        type:
+          descriptor:
+            sql:
+              BasicBinder: trace  #trace时，显示参数
