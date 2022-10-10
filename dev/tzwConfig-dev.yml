@@ -1,4 +1,30 @@
 spring:
+  kafka:
+    # kafka服务地址
+    bootstrap-servers: 124.223.44.66:9092
+    # 消费者配置
+    consumer:
+      group-id: myGroup
+      enable-auto-commit: true
+      auto-offset-reset: earliest
+      auto-commit-interval: 1000
+      max-poll-records: 1
+      # key和value的序列化（默认，可以不设置：默认只能反序列化字符串）
+      key-serializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    # 生产者配置
+    producer:
+      # 重试次数，默认Integer.MAX_VALUE
+      retries: 5
+      # 同一批次内存大小（默认16K）
+      batch-size: 16384
+      # 生产者内存缓存区大小(32M)
+      buffer-memory: 33554432
+      # key和value的序列化（默认，可以不设置：默认只能序列化字符串）
+      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      # ack应答机制，默认1，即只需要确认leader收到消息
+      acks: 1
   # 资源信息
   messages:
     # 国际化资源文件路径

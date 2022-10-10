@@ -1,0 +1,10 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: tzwKafka
+kafka:
+  consumer:
+    group-id:
+      # 各告警队列消费组:${kafka.consumer.group-id.testKafka}
+      testKafka: TESTKAFKA_dev
