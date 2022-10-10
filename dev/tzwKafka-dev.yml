@@ -6,5 +6,5 @@ spring:
 kafka:
   consumer:
     group-id:
-      # 各告警队列消费组:${kafka.consumer.group-id.testKafka}
-      testKafka: TESTKAFKA_dev
+      # 各告警队列消费组:${kafka.consumer.group-id.testkafka}
+      testkafka: TESTKAFKA_dev
