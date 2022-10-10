@@ -220,3 +220,10 @@ logging:
           descriptor:
             sql:
               BasicBinder: trace  #trace时，显示参数
+#kafka的topic名称
+queue:
+  topic:
+    # 告警队列
+    kafka:
+      system: SYSTEM_dev
+      operlog: OPERLOG_dev
