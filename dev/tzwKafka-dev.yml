@@ -7,5 +7,5 @@ kafka:
   consumer:
     group-id:
       # 各告警队列消费组:${kafka.consumer.group-id.system}
-      system: SYSTEM_dev
-      operlog: OPERLOG_dev
+      user: USER_dev
+      dologin: DOLOGIN_dev
