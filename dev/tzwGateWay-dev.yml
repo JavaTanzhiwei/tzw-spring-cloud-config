@@ -48,3 +48,10 @@ spring:
             - Path=/tzwJob/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
           filters:
             - StripPrefix=1
+        # 路由规则-工具集成
+        - id: tzwTools
+          uri: lb://tzwTools
+          predicates: # 断言（判断条件）
+            - Path=/tzwTools/** # 匹配对应的URL请求，将匹配到的请求追加到目标URL后
+          filters:
+            - StripPrefix=1
