@@ -67,7 +67,13 @@ spring:
     database: 0
     timeout: 10s
     ssl: false
-
+#kafka的消息队列topic名称
+queue:
+  topic:
+    # 消费队列
+    tzw:
+      system: SYSTEM_dev
+      operlog: OPERLOG_dev
 # redisson 配置
 redisson:
   # redis key前缀
@@ -223,10 +229,3 @@ logging:
           descriptor:
             sql:
               BasicBinder: trace  #trace时，显示参数
-#kafka的topic名称
-queue:
-  topic:
-    # 消费队列
-    tzw:
-      system: SYSTEM_dev
-      operlog: OPERLOG_dev
